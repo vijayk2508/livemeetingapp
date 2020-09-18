@@ -1,0 +1,102 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Registration_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Welcome to Live Meeting</title>
+    <link href="../App_Themes/Default.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            background-color: #090e11 !important;
+        }
+
+        .top-img {
+            height: 100px;
+            width: 156.8px;
+        }
+
+
+        .title {
+            background-color: white;
+            color: black;
+            font-size: 12px;
+            margin: 0px;
+            width: 156.8px;
+            display: inline-flex;
+        }
+		
+		#Menu1{
+		height: 30px !important;
+font-size: 15px !important;
+background-color: black !important;
+border-bottom: 2px solid #80808094 !important;
+float: left !important;
+width: 99% !important;
+padding: 12px 0 0px 9px !important;
+		}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table width="800" border="0" align="center" cellpadding="0" cellspacing="0" class="bordermain" style="background-color: #D3E5ED">
+                <tr>
+                    <td valign="top">
+                        <div style="background-color: black; margin: 0px;">
+                            <img class="top-img" src="../images/image1.jpg" alt="" />
+
+                            <img class="top-img" src="../images/image2.jpg" alt="" />
+
+                            <img class="top-img" src="../images/image3.jpg" alt="" />
+
+                            <img class="top-img" src="../images/image4.jpg" alt="" />
+
+                            <img class="top-img" src="../images/image5.jpg" alt="" />
+                        </div>
+                        <div style="background-color: black; margin: 0px;">
+
+                            <h5 class="title">Live Dicussion</h5>
+                            <h5 class="title">Business Meetings</h5>
+                            <h5 class="title">Friends And Family</h5>
+                            <h5 class="title">Meet New People</h5>
+                            <h5 class="title">Private Chat</h5>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="center">
+                        <asp:Menu ID="Menu1" runat="server" Font-Bold="True" ForeColor="white" Orientation="Horizontal"
+                            Width="100%" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" StaticSubMenuIndent="10px" Style="height: 37px; font-size: 15px; background-color: black; border-bottom: 1px solid white;">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/frmAboutUs.aspx" Text="About Us" Value="About Us"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/frmContactUs.aspx" Text="Contact Us" Value="Contact Us"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/frmFeedback.aspx" Text="Feedback" Value="Feedback"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/Default.aspx" Text="Admin Login" Value="Admin Login"></asp:MenuItem>
+                            </Items>
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                            <DynamicMenuStyle BackColor="#FFFBD6" />
+                            <StaticSelectedStyle BackColor="#FFCC66" />
+                            <DynamicSelectedStyle BackColor="#FFCC66" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                        </asp:Menu>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="395" valign="top">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30" bgcolor="#E9713F" class="content" align="center" style="text-align: center; background-color: black; color: white; border-top: 1px solid white;">Live Meeting All Right Reserved &copy; 2019</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

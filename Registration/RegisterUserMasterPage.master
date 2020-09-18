@@ -1,0 +1,92 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="RegisterUserMasterPage.master.cs" Inherits="Registration_RegisterUserMasterPage" %>
+
+<%@ Register Src="../User Control/HeaderUserControl.ascx" TagName="HeaderUserControl"
+    TagPrefix="uc2" %>
+<%@ Register Src="../User Control/MainUserControl.ascx" TagName="MainUserControl"
+    TagPrefix="uc1" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Welcome to Live Meeting</title>
+    <link href="../App_Themes/Default.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            background-color: #090e11 !important;
+        }
+
+        .top-img {
+            height: 100px;
+            width: 182.1px;
+        }
+
+        .title {
+            background-color: white;
+            color: black;
+            font-size: 12px;
+            margin: 0px;
+            width: 182.1px;
+            display: inline-flex;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table width="800" border="0" align="center" cellpadding="0" cellspacing="0" class="bordermain" style="background-color: #D3E5ED">
+                <tr>
+                    <td valign="top">
+                        <div style="background-color: black; margin: 0px;">
+                            <img class="top-img" src="../images/image1.jpg" alt="" />
+                            <img class="top-img" src="../images/image2.jpg" alt="" />
+                            <img class="top-img" src="../images/image3.jpg" alt="" />
+                            <img class="top-img" src="../images/image4.jpg" alt="" />
+                            <img class="top-img" src="../images/image5.jpg" alt="" />
+                        </div>
+                        <div style="background-color: black; margin: 0px;">
+                            <h5 class="title">Live Dicussion</h5>
+                            <h5 class="title">Business Meetings</h5>
+                            <h5 class="title">Friends And Family</h5>
+                            <h5 class="title">Meet New People</h5>
+                            <h5 class="title">Private Chat</h5>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top" align="center">
+                        <uc2:HeaderUserControl ID="HeaderUserControl1" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                    <td height="395" valign="top">
+                        <table border="1" cellpadding="0" cellspacing="0" width="100%" height="380">
+                            <tr>
+
+
+                                <td align="left" valign="top">
+
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="../images/index_09.jpg" alt="" style="width: 927px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30" bgcolor="#E9713F" class="content" align="center" style="text-align: center; background-color: black; color: white; border-top: 1px solid white;">Live Meeting All Right Reserved &copy; 2019</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
